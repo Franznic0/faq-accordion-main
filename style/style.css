@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(292, 16%, 49%);
+  background-color: hsl(275, 100%, 97%);
+}
+
+*::-moz-selection {
+  color: hsl(292, 42%, 14%);
+  background-color: hsl(275, 100%, 97%);
+}
+
+*::selection {
+  color: hsl(292, 42%, 14%);
+  background-color: hsl(275, 100%, 97%);
+}
+
+.top-background > * {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-10em);
+  gap: 1rem;
+  margin: auto;
+  padding: 2rem;
+  width: min(90vw, 550px);
+  border-radius: 15px;
+  box-shadow: 0 2px 25px 1px hsl(292, 42%, 14%);
+  background-color: hsl(0, 0%, 100%);
+}
+.container .title {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.7rem;
+  padding-block: 0.5rem;
+}
+.container .title img {
+  width: min(6vw, 33px);
+}
+.container .title h2 {
+  color: hsl(292, 42%, 14%);
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+.container .accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  padding-block: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .container .accordion:hover {
+    cursor: pointer;
+    color: hsl(292, 16%, 49%);
+  }
+}
+.container .accordion h3 {
+  max-width: 70%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 2.6vw;
+  font-size: clamp(1.1em, 2.6vw, 1.5em);
+}
+.container .accordion .icon {
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "icon-place";
+  width: 10%;
+}
+.container .accordion .icon-close {
+  grid-area: icon-place;
+  transform: translateY(-2rem);
+  transition: 300ms;
+}
+.container .accordion .icon-open {
+  grid-area: icon-place;
+  transform: translateY(0);
+  transition: 300ms;
+}
+.container .accordion.active > .icon > .icon-open {
+  transform: translateY(2rem);
+}
+.container .accordion.active > .icon > .icon-close {
+  transform: translateY(0);
+}
+.container .panel {
+  font-size: clamp(0.8rem, 2.3vw, 1rem);
+  line-height: 1.7rem;
+}
+.container .panel > p {
+  display: none;
+  opacity: 0;
+  height: 0;
+  padding-bottom: 1.5rem;
+}
+.container .separator {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+
+.panel.active > p {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  padding: 1rem;
+  background-color: hsl(275, 100%, 97%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    gap: 0.2rem;
+    padding: 1rem 1.5rem;
+  }
+  .container .title {
+    gap: 1rem;
+  }
+  .container .panel {
+    line-height: 1.1rem;
+  }
+}
+@media screen and (600px < width < 850px) {
+  .container {
+    margin-top: 3rem;
+  }
+}/*# sourceMappingURL=style.css.map */
