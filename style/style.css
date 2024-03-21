@@ -33,7 +33,7 @@ body {
   gap: 1rem;
   margin: auto;
   padding: 2rem;
-  width: min(90vw, 800px);
+  width: min(90vw, 700px);
   border-radius: 15px;
   box-shadow: 0 2px 25px 1px hsl(292, 42%, 14%);
   background-color: hsl(0, 0%, 100%);
@@ -71,12 +71,14 @@ body {
   text-align: left;
   font-weight: 700;
   font-size: 2.6vw;
-  font-size: clamp(1.1em, 2.6vw, 1.5em);
+  font-size: clamp(1.1em, 2.6vw, 1.3em);
 }
 .container .accordion .icon {
   overflow: hidden;
   display: grid;
   grid-template-areas: "icon-place";
+  justify-content: right;
+  align-items: center;
   width: 10%;
 }
 .container .accordion .icon-close {
@@ -96,10 +98,9 @@ body {
   transform: translateY(0);
 }
 .container .panel {
-  font-size: clamp(0.8rem, 2.3vw, 1rem);
+  font-size: clamp(0.8rem, 2.3vw, 0.9rem);
   line-height: 1.7rem;
-  width: 95%;
-  padding-right: 1.2rem;
+  padding-right: 2rem;
 }
 .container .panel > p {
   display: none;
@@ -118,7 +119,7 @@ body {
 }
 
 .attribution {
-  font-size: clamp(0.8rem, 2.3vw, 1rem);
+  font-size: clamp(0.8rem, 2.3vw, 0.9rem);
   text-align: center;
   padding: 1rem;
   background-color: hsl(275, 100%, 97%);
