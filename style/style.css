@@ -48,7 +48,7 @@ body {
 .container .title img {
   width: min(6vw, 33px);
 }
-.container .title h2 {
+.container .title h1 {
   color: hsl(292, 42%, 14%);
   font-size: clamp(2rem, 6vw, 3rem);
 }
